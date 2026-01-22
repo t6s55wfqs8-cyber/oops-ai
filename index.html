@@ -1,11 +1,56 @@
-<input id="input" placeholder="何か話しかける">
-<button onclick="talk()">送信</button>
-<p id="log"></p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oops AI</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 20px;
+    }
+    #log {
+      margin-top: 20px;
+      padding: 10px;
+      background: #222;
+      min-height: 100px;
+    }
+    input {
+      width: 70%;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
 
-<script>
-function talk() {
-  const v = document.getElementById("input").value;
-  const r = oopsReply(v);
-  document.getElementById("log").innerText = r;
-}
-</script>
+  <h1>Oops AI 起動中</h1>
+  <p>ここから世界がズレ始めます。</p>
+
+  <input id="input" placeholder="何か話しかけてみる…" />
+  <button onclick="send()">送信</button>
+
+  <div id="log"></div>
+
+  <script>
+    function send() {
+      const input = document.getElementById("input");
+      const log = document.getElementById("log");
+
+      if (!input.value) return;
+
+      const p = document.createElement("p");
+      p.textContent = "あなた：「" + input.value + "」";
+      log.appendChild(p);
+
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
