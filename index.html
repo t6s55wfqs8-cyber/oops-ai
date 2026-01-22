@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <title>Oops AI</title>
-  </head>
-  <body>
-    <h1>Oops AI 起動中</h1>
-    <p>ここから世界がズレ始めます。</p>
-  </body>
-</html>
+<input id="input" placeholder="何か話しかける">
+<button onclick="talk()">送信</button>
+<p id="log"></p>
+
+<script>
+function talk() {
+  const v = document.getElementById("input").value;
+  const r = oopsReply(v);
+  document.getElementById("log").innerText = r;
+}
+</script>
