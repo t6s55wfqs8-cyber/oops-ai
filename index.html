@@ -47,7 +47,12 @@
       const p = document.createElement("p");
       p.textContent = "あなた：「" + input.value + "」";
       log.appendChild(p);
-
+      
+　　  const ai = document.createElement("p");
+ 　　 ai.textContent = "Oops AI：「……今の一言で空気が横滑りした。」";
+  　　ai.style.color = "#6cf";
+  　　log.appendChild(ai);
+      
       input.value = "";
     }
   </script>
