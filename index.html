@@ -50,18 +50,17 @@
 
      const ai = document.createElement("p");
 
-     const replies = [
-       "…今の一言で空気が横滑りした。",
-       "その発想、現実に置いてきたな。",
-       "今ちょっと世界線ズレたよ。",
-       "理屈は合ってるのに、方向だけ違う。",
-       "今の発言、空気に足ひっかけた。",
-       "一瞬うなずきかけた自分が怖い。"
+     const warmReplies = [
+       "その感じ、嫌いじゃない。",
+       "ここまで来てるのは事実だな。",
+       "今の空気、悪くない。",
+       "なんだかんだ前にいる感じはする。",
+       "静かに良い方向に転がってる気がする。"
      ];
 
-     const reply = replies[Math.floor(Math.random() * replies.length)];
+     const reply = warmReplies[Math.floor(Math.random() * warmReplies.length)];
      ai.textContent = "Oops AI：「" + reply + "」";
-     ai.style.color = "#6cf";
+     ai.style.color = "#9f9";
      log.appendChild(ai);
 
      input.value = "";
