@@ -37,36 +37,36 @@
 
   <div id="log"></div>
 
-  <script>
-    function send() {
-      const input = document.getElementById("input");
-      const log = document.getElementById("log");
+ <script>
+   function send() {
+     const input = document.getElementById("input");
+     const log = document.getElementById("log");
 
-      if (!input.value) return;
+     if (!input.value) return;
 
-      const p = document.createElement("p");
-      p.textContent = "あなた：「" + input.value + "」";
-      log.appendChild(p);
-      
-　　  const ai = document.createElement("p");
-      
-　　　const replies = [
-  　　　"…今の一言で空気が横滑りした。",
-  　　　"その発想、現実に置いてきたな。",
-  　　　"今ちょっと世界線ズレたよ。",
-  　　　"理屈は合ってるのに、方向だけ違う。",
-  　　　"今の発言、空気に足ひっかけた。",
-  　　　"一瞬うなずきかけた自分が怖い。"
-　　　];
+     const p = document.createElement("p");
+     p.textContent = "あなた：「" + input.value + "」";
+     log.appendChild(p);
 
-　　　const reply = replies[Math.floor(Math.random() * replies.length)];
-　　　ai.textContent = "Oops AI：「" + reply + "」";
-　　　ai.style.color = "#6cf";
-　　　log.appendChild(ai);
-      
-      input.value = "";
-    }
-  </script>
+     const ai = document.createElement("p");
+
+     const replies = [
+       "…今の一言で空気が横滑りした。",
+       "その発想、現実に置いてきたな。",
+       "今ちょっと世界線ズレたよ。",
+       "理屈は合ってるのに、方向だけ違う。",
+       "今の発言、空気に足ひっかけた。",
+       "一瞬うなずきかけた自分が怖い。"
+     ];
+
+     const reply = replies[Math.floor(Math.random() * replies.length)];
+     ai.textContent = "Oops AI：「" + reply + "」";
+     ai.style.color = "#6cf";
+     log.appendChild(ai);
+
+     input.value = "";
+   }
+ </script>
 
 </body>
 </html>
